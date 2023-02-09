@@ -1,8 +1,8 @@
-# This is my project title
+# WEB3 DAO
 
 This sentence describes what my project is about summarized.
 
-## More Details
+## Details of the Project
 
 I can explain how my project works here with different topics.
 
