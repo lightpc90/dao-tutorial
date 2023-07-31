@@ -300,7 +300,7 @@ export default function Home() {
     } else if (nftBalance === 0) {
       return (
         <div className={styles.description}>
-          You do not own any CryptoDevs NFTs. <br />
+          You do not own any 24Codelabz NFTs. <br />
           <b>You cannot create or vote on proposals</b>
         </div>
       );
@@ -380,19 +380,19 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <>
       <Head>
-        <title>CryptoDevs DAO</title>
-        <meta name="description" content="CryptoDevs DAO" />
+        <title>24Codelabz DAO</title>
+        <meta name="description" content="24Codelabz DAO" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <h1 className={styles.title}>Welcome to 24Codelabz!</h1>
           <div className={styles.description}>Welcome to the DAO!</div>
           <div className={styles.description}>
-            Your CryptoDevs NFT Balance: {nftBalance}
+            Your 24Codelabz NFT Balance: {nftBalance}
             <br />
             Treasury Balance: {formatEther(treasuryBalance)} ETH
             <br />
@@ -403,7 +403,7 @@ export default function Home() {
               className={styles.button}
               onClick={() => setSelectedTab("Create Proposal")}
             >
-              Create Proposal
+              New Proposal
             </button>
             <button
               className={styles.button}
@@ -430,9 +430,9 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
-      </footer>
-    </div>
+      <div className={styles.footer}>
+        With &#10084; by Gideon Abbey (24Codelabz)
+      </div>
+    </>
   );
 }
