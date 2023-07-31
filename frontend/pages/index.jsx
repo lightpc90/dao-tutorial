@@ -270,6 +270,18 @@ export default function Home() {
     }
   }, [walletConnected]);
 
+
+  //handle the wallet connect button
+
+  const handleWalletConnectButton =()=>{
+    connectWallet().then(() => {
+      getDAOTreasuryBalance();
+      getUserNFTBalance();
+      getNumProposalsInDAO();
+      getDAOOwner();
+    });
+  }
+
   // Piece of code that runs everytime the value of `selectedTab` changes
   // Used to re-fetch all proposals in the DAO when user switches
   // to the 'View Proposals' tab
@@ -389,6 +401,8 @@ export default function Home() {
 
       <div className={styles.main}>
         <div>
+          {!walletConnected && <button onClick={handleWalletConnectButton} className={styles.button}>Connect Wallet</button>}
+          
           <h1 className={styles.title}>Welcome to 24Codelabz!</h1>
           <div className={styles.description}>Welcome to the DAO!</div>
           <div className={styles.description}>
